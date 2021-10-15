@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to With-Calli</title>
+<style>
+  
+</style>
+</head>
+<body>
+<div id="page">
+<header>
+   <span>&#9776;</span>
+   <a href="index.html"><span>With Calli</span></a>
+   <h5> 캘리와 더불어 꿈을 드려요</h5>
+</header>
+<nav>
+    <!--.navi>ul>li*5>a[href="sub$$.html"]{menu_$$}-->
+  <div class="navi">
+	<ul>
+		<li><a href="sub01.html">쇼핑</a></li>
+		<li><a href="sub02.html">드림그래퍼</a></li>
+		<li><a href="sub03.html">교육</a></li>
+		<li><a href="sub04.html">패키지</a></li>
+		<li><a href="sub05.html">커뮤니티</a></li>
+	</ul>
+  </div>
+</nav>
+<section>
+	<article class="media"><h3>온라인 교육</h3></article>
+	<video class="w3-col s6 w3-border" src="./media/media1.mp4" autoplay="True" controls="True">
+	</video>
+	<video class="w3-col s6 w3-border" src="./media/media2.mp4" autoplay="True" controls="True">
+	</video>
+    <br>
+    <br>
+	<article class="calli w3-margin-top" ><h3 class="w3-text-indigo w3-large">작품</h3></article>
+	<!-- .calli01>img[src="../images/photo$.jpg"]*5 -->
+	<div class="calli01" >
+	  <div class="w3-row">
+		<img  src="./images/photo1.jpg" alt="작품1" />
+		<img  src="./images/photo2.jpg" alt="작품2" />
+		<img  src="./images/photo3.jpg" alt="작품3" />
+	  </div>
+	  <br>
+		<div class="w3-row">
+			<img  src="./images/photo4.jpg" alt="작품4" style="height: 120px;"/>
+			<img  src="./images/photo5.jpg" alt="작품5" style="height: 120px;" />
+		</div>
+	</div>
+	<br>
+	<article class="package">패키지
+	<!--table[border="1"]>tr>th{제목$$}*3+(tr>td{교육$$}*3)*3 -->
+	<table border="1">
+		<tr >
+			<th>패키지</th>
+			<th>내용</th>
+			<th>금액</th>
+		</tr>
+			<tr>
+				<td>족자1</td>
+				<td>재료 및 교육비</td>
+				<td>50000</td>
+			</tr>
+			<tr>
+				<td>액자만들기</td>
+				<td>재료 및 교육비</td>
+				<td>70000</td>
+			</tr>
+			<tr>
+				<td>LED무드등</td>
+				<td>재료 및 교육비</td>
+				<td>100000</td>
+			</tr>
+		</tr>
+	</table>
+	</article>
+	
+</section>
+<aside class="right">
+   <div class="login">
+        <h3 >Log In</h3>
+            <form action="#" >
+                               아이디  :<input type="text" name="id"/> <br />
+                               패스워드:<input type="password" name="pass"/> <br /><br />
+                <input type="submit" value="로그인" />
+                <input type="reset" value="초기화" /><br />
+                <a href="register.html" target="_blank" id="register">회원가입</a>
+                <a href="#" id="forgot">비밀번호분실</a>
+            </form>
+        </div>
+   <div class="info">
+	<div id="aside-list-1"  >
+		<h5 class="w3-text-indigo">즐겨찾기</h5>
+				<ul>
+					<li><a href="http://kostat.go.kr">통계청</a></li>
+					<li><a href="http://bicdata.com">빅데이터</a></li>
+					<li><a href="http://www.r-project.org/">R-project</a></li>
+					<li><a href="#">데이터</a></li>
+					<li><a href="#">데이터</a></li>
+				</ul>
+		<a href="#">북마크 보기 </a>
+	</div>
+	<div id="aside-list-2" >
+				<h4 class="w3-text-indigo">최근 글</h4>
+				<ul>
+					<li><a href="#">데이터</a></li>
+					<li><a href="#">데이터</a></li>
+					<li><a href="#">데이터</a></li>
+					<li><a href="#">데이터</a></li>
+				</ul>
+	 </div>
+   </div>
+</aside>
+<footer>
+	<div class="w3-row"> <!-- grid 를 이용하여 작성하였음  -->
+		<div class="w3-col s4  w3-container" >
+			<h5> Contact Us</h5>
+			<ul>
+			  <li>Phone: 010 5280 ****</li>
+			  <li>Email: <a href="mailto:sense64@gmail.com" title="Email Us">sense64@gmail.com</a></li>
+			  <li><a href="https://sense64.github.io/web01/">https://sense64.github.io/web01/</a></li>
+			</ul>
+			
+		</div>
+		<div class="w3-col s4  w3-container" >
+			<h5> Follow Us</h5>
+			<a href="https://www.facebook.com/swhwang64"><i class="fa fa-facebook" style="font-size:30px;color:white"></i></a>
+			<a href="https://twitter.com/sense64"><i class="fa fa-twitter" style="font-size:30px;color:white"></i></a>
+			<a href="#"><i class="fa fa-instagram" style="font-size:30px;color:white"></i></a>
+			<br /><br/>
+			Copyright (c) 2021 SeonwonHwang<br/>
+		</div>
+		<div class="w3-col s4 w3-container" >
+			<h5> About Us</h5>
+			  My Site is optimized for learning, testing, and training.
+			  <a href="#" class="btn btn-block btn-base btn-icon fa-check"><span>Try it now</span></a>
+			
+		</div>
+	 </div>
+</footer>
+</div>
+</body>
+</html>

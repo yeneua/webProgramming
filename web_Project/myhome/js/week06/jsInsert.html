@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.자바스크립트 위치(삽입)
+        // 내부 js : <script> 태그와 /script>태그 사이에 필요한 자바스크립트 소스 작성
+        // 외부 js : 소스 파일을 별도의 파일로 저장(*.js)
+        // 인라인 js : html태그 내부에 삽입
+
+        //2.출력하는 방법
+        // console.log로 출력
+        // HTML element에 삽입(.innerHTML)
+        // HTML output (document.write())
+        // alertb box(대화상자)로 출력(window.alert())
+
+        function myFun(){  //bgcolor를 yello로 바꾸고 id가 demo인 사이에 다른 글자 넣으라는 뜻
+            document.bgColor="yellow";
+            document.getElementById("demo").innerHTML="자바스크립트"; // id=demo인 곳의 '여기의출력'이 글자를 '자바스크립트'로 바꾸겠단 뜻(해당 id를 get을 통해 가져와서 innerHTML에 넣음)
+        }
+
+        //3.대화상자
+        // alert(메시지) : 메시지 상자
+        // confirm(메시지) : 확인 상자
+        // prompt(메시지, 기본값) : 입력 상자
+
+        var x, y, input;
+        input = prompt("점수를 입력", 0); //문자열 입력
+        x = parseInt(input); //정수로변환
+        input = prompt("정수를 입력", 0); //문자열 입력
+        y = parseInt(input); //정수로변환
+        alert("합=" + (x+y));
+        console.log(x+y);
+        console.log(x*y);
+        console.log(x/y); //F12(개발자도구) 확인
+
+        //4.변수 -> varTest..html
+
+    </script>
+    
+</head>
+<body>
+    <div id="demo">여기에 출력</div>
+    <script> //내부스크립트
+        document.write("안녕하세요 김예나입니다"); // script:차례대로 순서대로 됨. head 안에 있을때와 body 안에 있을때 '여기에출력'보고 구분
+        document.bgColor="darkGray"; 
+    </script>
+    <br>
+    <button onclick="myFun();">Try it</button> <!--버튼 클릭하면 myFun함수 호출--><!--인라인스크립트-->
+    <button onclick="alert('저는 홍길동입니다~~')">alert()</button>
+</body>
+</html>
