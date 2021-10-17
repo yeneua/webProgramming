@@ -1,0 +1,9 @@
+section{
+    display: flex;
+}
+.main{
+    flex:3 ;
+}
+aside.right{
+    flex: 1;
+}
