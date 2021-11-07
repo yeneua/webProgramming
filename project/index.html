@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/slide.css">
+    <!--<link rel="stylesheet" href="./css/slide.css">-->
     <link rel="stylesheet" href="./css/hover.css">
     <link rel="stylesheet" href="./css/nA_img.css">
     <link rel="stylesheet" href="./css/nA_imghover.css">
+    <link rel="stylesheet" href="./css/slider.css">
     <style>
         *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
         body{max-width: 980px; margin: 0 auto;}
@@ -114,7 +115,8 @@
     </nav>
     <section>
         <article>
-            <div id="ad" class="w3-margin-top">    
+            <div id="ad" class="w3-margin-top">   
+                <!--
                 <div class="slider">
                     <input type="radio" name="slide" id="slide1" checked>
                     <input type="radio" name="slide" id="slide2">
@@ -129,7 +131,20 @@
                         <label for="slide2">&nbsp;</label>
                         <label for="slide3">&nbsp;</label>
                     </div>
+                </div>-->
+                <div id="slide" class="container">
+                    <div class="album">
+                      <div class="images">
+                        <img src="./images/slide1.png">
+                        <img src="./images/slide2.png">
+                        <img src="./images/slide3.png">
+                      </div>
+                    </div>
+                    <button class="prev">&#8592;</button>
+                    <button class="next">&#8594;</button>  
                 </div>
+                  <script src="script.js">
+                  </script>
             </div><br><br>
             <div id="bestItem" class="w3-container w3-margin-right w3-margin-top w3-center">
                 <h3 class="w3-center"> <b> BEST ITEM</b></h3>
