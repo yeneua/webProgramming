@@ -1,300 +1,346 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Yena's Web</title>
-    <link rel="stylesheet" href="./w3.css" />
+    <title>Filmming</title>
+    <link rel="stylesheet" href="./css/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./style01.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <!--<link rel="stylesheet" href="./css/slide.css">-->
+    <link rel="stylesheet" href="./css/hover.css">
+    <link rel="stylesheet" href="./css/nA_img.css">
+    <link rel="stylesheet" href="./css/nA_imghover.css">
+    <link rel="stylesheet" href="./css/slider.css">
     <style>
-        *{background-color: rgb(242, 243, 242);
-            font-family: 나눔스퀘어, Arial, Helvetica, sans-serif;}
+        *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
         body{max-width: 980px; margin: 0 auto;}
-        ul{list-style-type: none;}
-        nav a{text-decoration: none;}
-        article{
-            margin-right:15px;
+        header{
+            margin-top:50px;
+            margin-bottom: 40px;
         }
-        nav ul{
-            text-align: center;
-            background-color: white;
-            padding: 15px;
-                }
-        nav ul li{
-            font-size:large;
-            background-color: white;
-            display: inline;
-            padding: 10px 40px;
+        h1{text-align: center;}
+        nav{
+            position: relative;
+            z-index: 2; /*보이기 순서*/
         }
-        h1{
-            text-align: center;
+        #ad{z-index: 1;}
+        #bestItem .w3-card-4{float: left;}
+        #bestItem {overflow: hidden;}
+        footer{background-color: #333;
+        color: white;}
+
+        .image{background:url(./images/m_cam1.jpg);background-size: cover;}
+        .text{background:#000000; opacity: 0;}
+        .text p{padding-top: 300px;}
+        .image:hover .text{opacity: 0.5;text-align: center;color: #ffffff;}
+        #items{float: left;}
+        #review{text-align: center;}
+        #reviewimg{display: inline-block;}
+        #reviewimg p{text-align: left;}
+        #login button{
+            background-color: #333;
+            color: white;
         }
-        nav ul li:hover{
-            text-decoration: underline;
+        #login a{
+            text-decoration: none;
+            margin: 5px 0px 0px 0px;
         }
-        .login a{font-size: 13px;}
-        #About-basicInformation img {float: left;}
-        #creatingThings .w3-card-4{float: left;}
-        #creatingThings {overflow: hidden;}
-        #contact-info div{display: inline;}
+        .myMenu{float: right;
+        margin: 5px 10px 0px 0px;}
+        .myMenu a{text-decoration: none;}
+        #product button{margin: 0px 0px 5px 0px;}
     </style>
+    <script>
+        function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       alert(id + "님이 로그인하였습니다 ");
+                   } else {
+                       alert("비밀번호를 확인하세요");
+                   }
+               }else{
+                   alert("회원가입이 필요합니다");
+               }
+           }
+    </script>
 </head>
 <body>
+    <div class="myMenu">
+        <a href="index.html" style="font-size: 10px;">장바구니 |</a>
+        <a href="index.html" style="font-size: 10px;">주문조회 |</a>
+        <a href="index.html" style="font-size: 10px;">마이페이지</a></div><br><hr>
     <header>
-        <h1> <b> Yena's Site</b></h1>
+        <div class="w3-center w3-margin-top w3-margin-bottom w3-margin-xxlarge">
+        <a href="index.html"><img src="./images/title1.png" alt="Filmming" width=300px></a></div>
     </header>
-        <nav>
-            <div class="navi">
-            <ul class="w3-bar w3-center">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Profile">Profile</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
+    <nav>
+        <ul>
+          <li class="dropdown w3-center">
+            <a href="./sub01/sub01.html" class="dropbtn">롤필름</a>
+            <div class="dropdown-content">
+              <a href="./sub01/sub01_01.html">컬러필름</a>
+              <a href="./sub01/sub01_02.html">흑백필름</a>
             </div>
-        </nav>   
+          </li>
+          <li class="dropdown">
+            <a href="./sub02/sub02.html" class="dropbtn">카메라</a>
+            <div class="dropdown-content">
+              <a href="./sub02/sub02_01.html">일회용카메라</a>
+              <a href="./sub02/sub02_02.html">다회용카메라</a>
+              <a href="./sub02/sub02_03.html">폴라로이드</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub03/sub03.html" class="dropbtn">현상/인화/스캔</a>
+            <div class="dropdown-content">
+              <a href="./sub03/sub03.html">현상/스캔</a>
+              <a href="./sub03/sub03.html">인화</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub04/sub04.html" class="dropbtn">리뷰</a>
+          </li>
+          <li class="dropdown">
+            <a href="./sub05/sub05.html" class="dropbtn">상품등록</a>
+            <div class="dropdown-content">
+                <a href="./sub05/sub05.html#productList">상품리스트</a>
+            </div>
+          </li>
+        </ul>
+    </nav>
     <section>
-        <article class="main w3-white">
-            <div id="About" class="w3-white w3-contaier">
-                <div id="About-basicInformation" class="w3-white w3-margin-left w3-margin-top">
-                <h3 class="w3-margin-left w3-white"><b class="w3-white">About</b></h3>
-                    <img src="img/imoji.png" style="vertical-align:middle;" width="120px">
-                    <p class="w3-white"> <br> name : 김예나 <br> birth : 2001.11.17 <br>school : 동아대학교 </p>    
-                </div>
-                <div id="favoritesong" class="w3-white w3-container">
-                    <h4 class="w3-white w3-margin-left">favorite song</h4>
-                        <div class="w3-center w3-white">
-                        <iframe src="./let's.html" frameborder="0" width="250" height="300" class="w3-border"></iframe>
-                        <iframe width="430" height="300" src="https://www.youtube.com/embed/dboaFYdUxFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <article>
+            <div id="ad" class="w3-margin-top">   
+                <!--
+                <div class="slider">
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    <ul id="imgholder" class="imgs">
+                        <li><img src="./images/slide1.png"></li>
+                        <li><img src="./images/slide2.png"></li>
+                        <li><img src="./images/slide3.png"></li>
+                    </ul>
+                    <div class="bullets">
+                        <label for="slide1">&nbsp;</label>
+                        <label for="slide2">&nbsp;</label>
+                        <label for="slide3">&nbsp;</label>
                     </div>
-                </div><br>
-                <div id="hobby" class="w3-white w3-container">
-                    <div id="film" class="w3-white">
-                        <h4 class="w3-white w3-margin-left">hobby</h4> <h5 class="w3-white w3-margin-left">#film</h5> 
-                        <div class="w3-center w3-white">
-                            <img src="img/film1.jpg" class="w3-round" alt="filmPhoto" width="30%">
-                            <img src="img/film2.jpg" class="w3-round" alt="filmPhoto" width="30%">
-                            <img src="img/film3.jpg" class="w3-round" alt="filmPhoto" width="30%">
+                </div>-->
+                <div id="slide" class="container">
+                    <div class="album">
+                      <div class="images">
+                        <img src="./images/slide1.png">
+                        <img src="./images/slide2.png">
+                        <img src="./images/slide3.png">
+                      </div>
+                    </div>
+                    <button class="prev">&#8592;</button>
+                    <button class="next">&#8594;</button>  
+                </div>
+                  <script src="script.js">
+                  </script>
+            </div><br><br>
+            <div id="bestItem" class="w3-container w3-margin-right w3-margin-top w3-center">
+                <h3 class="w3-center"> <b> BEST ITEM</b></h3>
+                <div class="w3-center">
+                    <div id="items" style="width: 30%;" class="w3-margin-left">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/m_cam1.jpg" class="w3-border"></div>
+                            <figcaption>
+                                <h4>M35 토이카메라<br>&#8361;35000</h4>
+                            </figcaption>
+                     </figure>
+                    </div>
+                    <div id="items" style="width: 30%;" class="w3-margin-left w3-margin-right">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/c_film2.jpg" class="w3-border"></div>
+                            <figcaption>
+                                <h4>코닥 컬러플러스 <br> &#8361;8500</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="items" style="width: 30%;" class="w3-margin-right">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/d_cam1.png" class="w3-border"></div>
+                            <figcaption>
+                                <h4>코닥 펀세이버 <br> &#8361;14500</h4>
+                            </figcaption>
+                        </figure> <br>
+                    </div>
+                    <div id="items" style="width: 30%;" class="w3-margin-left">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/c_film3.jpg" class="w3-border"></div>
+                            <figcaption>
+                                <h4>후지컬러 c200 <br> &#8361;11500</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="items" style="width: 30%;" class="w3-margin-left w3-margin-right">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/c_film1.jpg" class="w3-border"></div>
+                            <figcaption>
+                                <h4>코닥 골드200 <br> &#8361;8500</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="items" style="width: 30%;" class="w3-margin-right">
+                        <figure>
+                            <div class="gallery-img"><img src="./images/dev.jpg" class="w3-border"></div>
+                            <figcaption>
+                                 <h4>35mm 컬러필름 현상 <br> &#8361;4000</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div> <br><br><br>
+            <div id="newArrival" class="w3-conatiner w3-margin-right w3-margin-top">
+                <h3 class="w3-center"><b>NEW ARRIVAL</b></h3>
+                <div class="newImg">
+                    <div class="a">
+                        <div class="jb-wrap">
+                            <div class="jb-image"><img src="./images/m_cam3.png" alt="뉴트로 방수 토이카메라"></div><hr>
+                            <div class="jb-text">
+                                뉴트로 방수 토이카메라 <br> &#8361;12000
+                            </div>  
                         </div>
-                    </div><br>
-                    <div id="creatingThings" class="w3-white">
-                        <h5 class="w3-white w3-margin-left">#creating things</h5>
-                        <div class="w3-center">
-                        <div class="w3-card-4 w3-margin-right" style="width:47%">
-                            <img src="img/crt1.jpg" alt="Alps" style="width:100%">
-                            <div class="w3-container w3-center">
-                            <p>비즈반지를 만들어 친구들에게 선물했습니다</p>
+                    </div>
+                    <div class="a">
+                        <div class="jb-wrap w3-margin-left w3-margin-right">
+                            <div class="jb-image"><img src="./images/p_cam3.jpg" alt="폴라로이드 원스텝"></div><hr>
+                            <div class="jb-text">
+                                폴라로이드 원스텝 <br> &#8361;16000
                             </div>
                         </div>
-                        <div class="w3-card-4 w3-margin-left" style="width:47%">
-                            <img src="img/crt2.jpg" alt="Alps" style="width:100%">
-                            <div class="w3-container w3-center">
-                            <p>뜨개질로 귀도리를 만들어 동생에게 주었습니다</p>
+                    </div> 
+                    <div class="a">
+                        <div class="jb-wrap">
+                            <div class="jb-image"><img src="./images/m_cam2.jpg" alt="로모그래피 액션샘플러"></div><hr>
+                            <div class="jb-text">
+                                로모그래피 액션샘플러 <br> &#8361;33000
                             </div>
                         </div>
-                        </div>
-                    </div><br>
-                    <div id="board" class="w3-white">
-                        <h5 class="w3-white w3-margin-left">#board</h5>
-                        <div class="w3-center w3-white">
-                            <video class="w3-col s6 w3-border w3-white" src="./img/board2.mp4" alt="board" controls="True"></video>
-                            <img src="./img/board1.jpg" alt="board" width="50%">
-                        </div>
                     </div>
-                </div>
-            </div><br><br>
-            <div id="Profile" class="w3-white w3-contaier">
-                <div class="w3-white w3-margin-left">
-                <h3 class="w3-margin-left w3-white"><b class="w3-white">Profile</b></h3></div>
-                <div id="experience" class="w3-white w3-margin-left w3-margin-top">
-                    <div id="job" class="w3-white">
-                        <h5 class="w3-white w3-margin-left">#희망진로</h5>
-                        <div class="w3-panel w3-card-4 w3-margin-right" style="color: rgb(242, 243, 242);">
-                            <p class="w3-white w3-center w3-padding">구체적이지는 않지만 저는 크게 IT 계열 직종과 데이터 분석가를 생각하고 있습니다. <br> IT 계열에서는 개발자 혹은 ux/ui 디자이너가 되고 싶습니다. <br> 그래서 서비스기획에 이어 웹프로그래밍 수업을 수강하고 있습니다. <br> 컴퓨터를 활용해 일을 하는 환경이 저와 잘 맞는 것 같습니다. <br> 이번 학기 웹프로그래밍 수업을 통해 제 진로가 더욱 구체화되었으면 합니다.
-                        </div>
-                        </div>
-                    </div><br>
-                    <div id="table" class="w3-margin-right w3-margin-left">
-                        <table class="w3-table w3-bordered w3-border">
-                            <tr>
-                            <th class="w3-white w3-center">기간</th>
-                            <th class="w3-white w3-center">내용</th>
-                            <th class="w3-white w3-center">비고</th>
-                            </tr>
-                            <tr>
-                            <td class="w3-white w3-center">2020.3~</td>
-                            <td class="w3-white w3-center">동아대학교 경영정보학과 재학</td>
-                            <td class="w3-white w3-center">2학년</td>
-                        </tr>
-                            <tr>
-                            <td class="w3-white w3-center">2021.3~</td>
-                            <td class="w3-white w3-center">경영대학 우수 Dauist</td>
-                            <td class="w3-white w3-center">-</td>
-                            </tr>
-                            <tr>
-                            <td class="w3-white w3-center">2021.9~</td>
-                            <td class="w3-white w3-center">디스이즈 15기</td>
-                            <td class="w3-white w3-center">리액트네이티브팀</td>
-                            </tr>
-                        </table>
-                    </div><br>
-                    <div id="dauist" class="w3-white">
-                        <div class="w3-margin-left w3-white">
-                        <h5 class="w3-white w3-margin-left">#dauist</h5></div>
-                        <div class="w3-center w3-white">
-                            <img src="img/dau1.jpg" class="w3-round" alt="dauist" width="30%">
-                            <img src="img/dau2.jpg" class="w3-round" alt="dauist" width="30%">
-                            <img src="img/dau3.jpg" class="w3-round" alt="dauist" width="30%">
-                        </div>
-                    </div><br>
-                    <div id="DSIS" class="w3-white">
-                        <div class="w3-margin-left w3-white">
-                        <h5 class="w3-white w3-margin-left">#DSIS</h5></div>
-                        <div class="w3-center w3-white">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vciFApX505k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p class="w3-white">아직은 리액트 네이티브에 대해 잘 모르지만 점점 알아가며, 스터디에 열심히 참여하고 있습니다!</p>
-                        </div>
-                    </div>
-                </div>      
-            </div><br><br>
-            <div id="Portfolio" class="w3-white w3-contaier">
-                <div class="w3-white w3-margin-left">
-                <h3 class="w3-margin-left w3-white"><b class="w3-white">Portfolio</b></h3></div>
-                <div id="github" class="w3-white w3-margin-left w3-margin-top">
-                        <h5 class="w3-white w3-margin-left">#github</h5>
-                        <a href="https://github.com/yeneua" target="_blank"><img src="./img/github.png" alt="github" width="100" class="w3-white w3-margin-left"></a>
-                </div>
-                <div id="self-study" class="w3-white">
-                    <div class="w3-white w3-margin-right w3-margin-left">
-                    <h5 class="w3-white w3-margin-left">#self-study</u></h5></div>
-                    <!-- w3schools W3.CSS Tabs -->
-                    <div class="w3-margin-left">
-                    <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button" onclick="openCity('London')">Web</button>
-                        <button class="w3-bar-item w3-button" onclick="openCity('Paris')">JavaScript</button>
-                        <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">DSIS</button>
-                      </div>
-                      
-                      <div id="London" class="w3-container w3-display-container city w3-white w3-margin-bottom w3-border">
-                        <span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-large w3-display-topright">&times;</span>
-                        <h4 class="w3-white">Web</h4>
-                        <a href="https://blog.naver.com/yena1117" target="_blank" class="w3-white">web : html & internet</a><br> -> html의 기본 구조와 internet에 대해 공부한 내용(링크 클릭) <br><br>
-                      </div>
-                      
-                      <div id="Paris" class="w3-container w3-display-container city w3-white w3-margin-bottom w3-border" style="display:none">
-                        <span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-large w3-display-topright">&times;</span>
-                        <h4 class="w3-white">JavaScript</h4>
-                        <a href="https://blog.naver.com/yena1117/222528133233" target="_blank" class="w3-white">js 기초 강의</a><br> -> js 문법 기초에 대해 공부한 내용(링크 클릭)<br><br>
-                      </div>
-                      
-                      <div id="Tokyo" class="w3-container w3-display-container city w3-white w3-margin-bottom w3-border" style="display:none">
-                        <span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-large w3-display-topright">&times;</span>
-                        <h4 class="w3-white">DSIS</h4>
-                        <a href="https://blog.naver.com/yena1117/222529082955" target="_blank" class="w3-white">디스이즈 스터디 및 과제</a><br> -> 디스이즈 스터디에서 수행한 과제 내용 및 과정(링크 클릭)<br><br>
-                      </div>
-                    </div>
-                      <script>
-                      function openCity(cityName) {
-                        var i;
-                        var x = document.getElementsByClassName("city");
-                        for (i = 0; i < x.length; i++) {
-                          x[i].style.display = "none";  
-                        }
-                        document.getElementById(cityName).style.display = "block";  
-                      }
-                      </script>
-                    <!-- w3schools W3.CSS Tabs -->
-                </div>
-            </div><br><br>
-            <div id="Contact" class="w3-white w3-contaier">
-                <div class="w3-white w3-margin-left">
-                    <h3 class="w3-margin-left w3-white"><b class="w3-white">Contact</b></h3></div>
-                <div class="w3-margin-left w3-margin-right">
-                    <div class="login w3-margin-top">
-                        <form action="#" class="w3-container w3-white">
-                            <h4 class=" w3-white">Messenger</h4>
-                            <p class="w3-white"><label class="w3-white">메시지</label>
-                                <input class="w3-input w3-border w3-white w3-padding-32" type="text" name="messenger"></p>
-                            <div class="w3-margin-bottom w3-white">
-                                <input type="submit" value="확인" class="w3-dark-gray w3-btn">
+                    <div class="a">
+                        <div class="jb-wrap">
+                            <div class="jb-image"><img src="./images/m_film4.jpg" alt="일포드 DELT 100"></div><hr>
+                            <div class="jb-text">
+                                일포드 DELT 100 <br> &#8361;11300
                             </div>
-                        </form>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="jb-wrap w3-margin-left w3-margin-right">
+                            <div class="jb-image"><img src="./images/p_cam2.jpg" alt="코닥 미니샷2"></div><hr>
+                            <div class="jb-text">
+                                코닥 미니샷2 <br> &#8361;143000
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="jb-wrap">
+                            <div class="jb-image"><img src="./images/c_film6.jpg" alt="코닥 포트라 800"></div><hr>  
+                            <div class="jb-text">
+                            코닥 포트라 800 <br> &#8361;20000
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="contact-info" class="w3-white w3-margin-left w3-margin-bottom">
-                    <div class="w3-large w3-white w3-margin-left">
-                    <i class="fa fa-search w3-white"></i></div>
-                    <div class="w3-white"> &nbsp; Location : 부산광역시 서구 부민동 구덕로 225</div>
-                </div>
+            </div><br><br>  
+            <div id="review" class="w3-conatiner w3-margin-right w3-margin-top w3-center">
+                <h3 class="w3-center"><b>REVIEW</b></h3>
+                    <div id="reviewimg" class="w3-card-4 w3-margin-bottom" style="width:30%">
+                        <img src="./images/photo1.jpg" alt="review" style="width:100%">
+                        <div class="w3-container w3-white">
+                        <p>★★★★★ <br> 너무 예쁘게 잘찍었습니다</p> <hr> <p> <img src="./images/c_film2.jpg" alt="코닥 컬러플러스200" width="40px"> 코닥 컬러플러스200</p>
+                        </div>
+                    </div>
+                    <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-right w3-margin-left" style="width:30%">
+                        <img src="./images/photo2.jpg" alt="review" style="width:100%">
+                        <div class="w3-container w3-center w3-white">
+                            <p>★★★★★ <br> 색감 좋아요 잘쓰고 있어요</p> <hr> <p> <img src="./images/c_film1.jpg" alt="코닥 골드200" width="40px"> 코닥 골드200</p>
+                        </div>
+                    </div>
+                    <div id="reviewimg" class="w3-card-4 w3-margin-bottom" style="width:30%">
+                        <img src="./images/photo3.jpg" alt="review" style="width:100%">
+                        <div class="w3-container w3-center w3-white">
+                            <p>★★★★★ <br> 굿굿 앞으로 여기서만 구매ㅠ</p> <hr> <p> <img src="./images/d_cam1.png" alt="코닥 펀세이버" width="40px"> &nbsp; 코닥 펀세이버</p>
+                        </div>
+                    </div>
             </div>
         </article>
-        <aside class = "right w3-contaier w3-cell">
-            <div class="w3-card" style="width: 50;">
-                <img src="img/photo.jpg" alt="yena's photo" style="width:50%" class="w3-right">
-                <img src="img/icon.jpg" alt="icon" style="width:50%" class="w3-left">
-                <div class="w3-container w3-white">
-                  <h4 class="w3-white"><b class="w3-white">김예나</b></h4>
-                  <p class="w3-white">동아대학교 경영정보학과</p>
-                </div>
+        <aside class="right w3-contaier w3-margin-top">
+            <div id="login" class="w3-container w3-margin-left">
+                <h4> <b> 로그인</b> </h4>
+                <input type="text" name="" id="id" placeholder="아이디" style="width: 180px;"><br>
+                <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 180px;"><br>
+                <button onclick="login();" class="w3-button w3-margin-top" style="width: 100%;">로그인</button>
+                <!--<input type="reset" value="취소" class="w3-button w3-red w3-margin-top" style="width: 35%;"><br>-->
+                <a href="#" id="find" class="w3-button w3-light-gray" style="width: 100%;">아이디/비밀번호 찾기</a>
+                <a href="register.jsp" target="_blank" id="register" class="w3-button w3-light-gray" style="width: 100%;">회원가입</a><br>
+            </div> <hr class="w3-margin-left">
+            <div id="search" class="w3-center w3-contaier w3-border w3-margin-left w3-margin-bottom">
+                <p><b>인기검색어</b></p>
+                <table class="w3-table">
+                    <tr>
+                        <td>1</td>
+                        <td>코닥 펀세이버</td>
+                        <td>&#8210;</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>폴라로이드</td>
+                        <td>&#8593;</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>코닥 필름</td>
+                        <td>&#8595;</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>일회용카메라</td>
+                        <td>&#8593;</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>후지필름</td>
+                        <td>&#8593;</td>
+                      </tr>
+                  </table><br>
             </div>
-            <div class="login w3-margin-top">
-                <form action="#" class="w3-container w3-border w3-white">
-                    <h4 class=" w3-white">Log In</h4>
-                    <p class="w3-white"><label class="w3-white">아이디</label>
-                    <input class="w3-input w3-border w3-white" type="text" name="id"></p>
-              
-                    <p class="w3-white"><label class="w3-white">비밀번호</label>
-                    <input class="w3-input w3-border w3-white" type="password" name="pwd" ></p>
-                    <div class="w3-center w3-white">
-                        <input type="submit" value="로그인" class="w3-dark-gray w3-btn">
-                        <input type="reset" value="취소" class="w3-dark-gray w3-btn"><br>
-                        <a href="register.jsp" target="_blank" id="register">회원가입</a>
-                        <a href="#" id="find" class="text-small">아이디/비밀번호 찾기</a>
-                    </div>
-              </form>
-            </div>
-
-            <div class="bookmark w3-contaier w3-white w3-border w3-margin-top">
-                <h3 class="w3-white w3-center"> <b class="w3-white"> 바로가기</b></h3><hr>
-                <ul class="w3-bar w3-margin-right w3-white">
-                    <div class="w3-center w3-margin-right w3-white">
-                    <li class="w3-margin-right w3-white"><a href="#favoritesong" class="w3-white w3-center">favorite song</a></li>
-                    <li class="w3-white w3-margin-right "><a href="#film" class="w3-white w3-center">#film</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#creatingThings" class="w3-white w3-center">#creating things</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#board" class="w3-white w3-center">#board</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#job" class="w3-white w3-center">#희망진로</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#dauist" class="w3-white w3-center">#dauist</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#DSIS" class="w3-white w3-center">#DSIS</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#github" class="w3-white w3-center">#github</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#self-study" class="w3-white w3-center">#self-study</a></li>
-                    <li class="w3-white w3-margin-right"><a href="#Contact" class="w3-white w3-center">#messenger</a></li></div>
-                </ul>
-                </div>
         </aside>
+        <div id="bookmark"> <!--position fixed로 aside밖에-->
+            <input type="image" src="./images/arrowtop.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,0)" alt="맨위로" />
+            <input type="image" src="./images/arrowbottom.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,3000)" alt="맨아래로" />    
+        </div>
     </section>
-<br>
-<footer class="w3-container w3-dark-gray w3-padding-large"> <!--푸터 배경-->
-   <div class="w3-row w3-dark-gray"> <!-- grid 를 이용하여 작성하였음  -->
-      <div class="w3-col s6 w3-container w3-dark-gray">
-         <h5 class="w3-dark-gray"> About</h5>
-         phone : 010 **** 8524</li><br>
-         email : <a href="mailto:yena1117@donga.ac.kr" title="Email" target="_blank">yena1117@donga.ac.kr</a></li><br>
-         <a href="https://blog.naver.com/yena1117" target="_blank">https://blog.naver.com/yena1117</a></li>   
-      </div>
-      <div class="w3-col s6 w3-container w3-dark-gray">
-         <h5 class="w3-dark-gray"> Follow</h5>
-         <a href="https://www.facebook.com/yena1117" target="_blank"><i class="fa fa-facebook w3-dark-gray" style="font-size:25px;color:white"></i></a>
-         <a href="https://www.instagram.com/makeusfeelalive__" target="_blank"><i class="fa fa-instagram w3-dark-gray" style="font-size:25px;color:white"></i></a>
-            <a href="https://yeneua.github.io/webProgramming/" target="_blank"><i class="fa fa-github w3-dark-gray" style="font-size:25px;color:white"></i></a>
-            <br> <br> Copyright &copy; 2021 Yena Kim
-      </div>
-    </div>
-</footer>
+    <footer class="w3-container w3-padding w3-margin-top">
+        <div class="w3-row">
+           <h5>&nbsp; <b> Filmming</b></h5>
+           <div class="w3-col s4 w3-container">
+              <p> TEL : 051-562-1117 <br>
+               평일 09:00 ~ 18:00 <br>
+              토 / 일 / 공휴일 휴무</p>
+              </div>
+           <div class="w3-col s4 w3-container">
+            <p> 법인명(상호) : 필르밍 | 대표 김예나 <br>
+             사업자등록번호 : 793-12-32470   <br>
+             주소 : 부산시 경영구 정보로 20-17</p>
+           </div>
+           <div class="w3-col s4 w3-container">
+            <a href="https://www.facebook.com/yena1117" target="_blank"><i class="fa fa-facebook" style="font-size:25px;color:white"></i></a>&nbsp;
+            <a href="https://www.instagram.com/makeusfeelalive__" target="_blank"><i class="fa fa-instagram" style="font-size:25px;color:white"></i></a>&nbsp;
+            <i class="fa fa-cc-visa" style="font-size:25px;color:white"></i>
+            <br> email : yena1117@donga.ac.kr
+            <br>Copyright &copy; Filliming. 
+            </div>
+         </div>
+     </footer>
 </body>
 </html>
