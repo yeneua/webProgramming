@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmming</title>
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/slide.css">
+    <link rel="stylesheet" href="../css/hover.css">
+    <link rel="stylesheet" href="../css/nA_img.css">
+    <link rel="stylesheet" href="../css/nA_imghover.css">
+    <style>
+        *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
+        body{max-width: 980px; margin: 0 auto;}
+        header{
+            margin-top:50px;
+            margin-bottom: 40px;
+        }
+        h1{text-align: center;}
+        nav{
+            position: relative;
+            z-index: 2; /*보이기 순서*/
+        }
+        footer{background-color: #333;
+        color: white;}
+        #login button{
+            background-color: #333;
+            color: white;
+        }
+        #login a{
+            text-decoration: none;
+            margin: 5px 0px 0px 0px;
+        }
+        .myMenu{float: right;
+        margin: 5px 10px 0px 0px;}
+        .myMenu a{text-decoration: none;}
+        #review{text-align: center;}
+        #reviewimg{display: inline-block;}
+        #reviewimg p{text-align: left;}
+    </style>
+    <script>
+        function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       alert(id + "님이 로그인하였습니다 ");
+                   } else {
+                       alert("비밀번호를 확인하세요");
+                   }
+               }else{
+                   alert("회원가입을 하세요");
+               }
+           }
+    </script>
+</head>
+<body>
+    <div class="myMenu">
+        <a href="index.html" style="font-size: 10px;">장바구니 |</a>
+        <a href="index.html" style="font-size: 10px;">주문조회 |</a>
+        <a href="index.html" style="font-size: 10px;">마이페이지</a></div><br><hr>
+    <header>
+        <div class="w3-center w3-margin-top w3-margin-bottom w3-margin-xxlarge">
+        <a href="../index.html"><img src="../images/title1.png" alt="Filmming" width=300px></a></div>
+    </header>
+    <nav>
+        <ul>
+          <li class="dropdown w3-center">
+            <a href="../sub01/sub01.html" class="dropbtn">롤필름</a>
+            <div class="dropdown-content">
+              <a href="../sub01/sub01_01.html">컬러필름</a>
+              <a href="../sub01/sub01_02.html">흑백필름</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../sub02/sub02.html" class="dropbtn">카메라</a>
+            <div class="dropdown-content">
+              <a href="../sub02/sub02_01.html">일회용카메라</a>
+              <a href="../sub02/sub02_02.html">다회용카메라</a>
+              <a href="../sub02/sub02_03.html">폴라로이드</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../sub03/sub03.html" class="dropbtn">현상/인화/스캔</a>
+            <div class="dropdown-content">
+              <a href="../sub03/sub03.html">현상/스캔</a>
+              <a href="../sub03/sub03.html">인화</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../sub04/sub04.html" class="dropbtn w3-dark-gray">리뷰</a>
+          </li>
+          <li class="dropdown">
+            <a href="../sub05/sub05.html" class="dropbtn">상품등록</a>
+            <div class="dropdown-content">
+              <a href="#">상품리스트</a>
+            </div>
+          </li>
+        </ul>
+    </nav>
+    <section>
+        <article class="w3-contaier w3-center w3-margin-top">
+          <div id="review">
+            <h3 class="w3-center w3-margin-bottom"><b>REVIEW</b></h3>
+            <div id="reviewimg" class="w3-card-4 w3-margin-bottom" style="width:30%">
+                <img src="../images/photo1.jpg" alt="review" style="width:100%">
+                <div class="w3-container w3-white">
+                <p>★★★★★ <br> 너무 예쁘게 잘찍었습니다</p> <hr> <p> <img src="../images/c_film2.jpg" alt="코닥 컬러플러스200" width="40px"> 코닥 </p>
+                </div>
+            </div>
+            <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-right w3-margin-left" style="width:30%">
+              <img src="../images/photo2.jpg" alt="review" style="width:100%">
+              <div class="w3-container w3-center w3-white">
+                  <p>★★★★★ <br> 색감 좋아요 잘쓰고 있어요</p> <hr> <p> <img src="../images/c_film1.jpg" alt="코닥 골드200" width="40px"> 코닥</p>
+              </div>
+            </div>
+            <div id="reviewimg" class="w3-card-4 w3-margin-bottom" style="width:30%">
+                <img src="../images/photo3.jpg" alt="review" style="width:100%">
+                <div class="w3-container w3-center w3-white">
+                    <p>★★★★★ <br> 굿굿 앞으로 여기서만 구매ㅠ</p> <hr> <p> <img src="../images/d_cam1.png" alt="코닥 펀세이버" width="40px"> &nbsp; 코닥 </p>
+                </div>
+            </div>
+            <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-top" style="width:30%">
+              <img src="../images/photo1.jpg" alt="review" style="width:100%">
+              <div class="w3-container w3-white">
+              <p>★★★★★ <br> 너무 예쁘게 잘찍었습니다</p> <hr> <p> <img src="../images/c_film2.jpg" alt="코닥 컬러플러스200" width="40px"> 코닥 </p>
+              </div>
+          </div>
+          <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-right w3-margin-left w3-margin-top" style="width:30%">
+            <img src="../images/photo2.jpg" alt="review" style="width:100%">
+            <div class="w3-container w3-center w3-white">
+                <p>★★★★★ <br> 색감 좋아요 잘쓰고 있어요</p> <hr> <p> <img src="../images/c_film1.jpg" alt="코닥 골드200" width="40px"> 코닥</p>
+            </div>
+          </div>
+          <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-top" style="width:30%">
+              <img src="../images/photo3.jpg" alt="review" style="width:100%">
+              <div class="w3-container w3-center w3-white">
+                  <p>★★★★★ <br> 굿굿 앞으로 여기서만 구매ㅠ</p> <hr> <p> <img src="../images/d_cam1.png" alt="코닥 펀세이버" width="40px"> &nbsp; 코닥 </p>
+              </div>
+          </div>
+          <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-top" style="width:30%">
+            <img src="../images/photo1.jpg" alt="review" style="width:100%">
+            <div class="w3-container w3-white">
+            <p>★★★★★ <br> 너무 예쁘게 잘찍었습니다</p> <hr> <p> <img src="../images/c_film2.jpg" alt="코닥 컬러플러스200" width="40px"> 코닥 </p>
+            </div>
+        </div>
+        <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-right w3-margin-left w3-margin-top" style="width:30%">
+          <img src="../images/photo2.jpg" alt="review" style="width:100%">
+          <div class="w3-container w3-center w3-white">
+              <p>★★★★★ <br> 색감 좋아요 잘쓰고 있어요</p> <hr> <p> <img src="../images/c_film1.jpg" alt="코닥 골드200" width="40px"> 코닥</p>
+          </div>
+        </div>
+        <div id="reviewimg" class="w3-card-4 w3-margin-bottom w3-margin-top" style="width:30%">
+            <img src="../images/photo3.jpg" alt="review" style="width:100%">
+            <div class="w3-container w3-center w3-white">
+                <p>★★★★★ <br> 굿굿 앞으로 여기서만 구매ㅠ</p> <hr> <p> <img src="../images/d_cam1.png" alt="코닥 펀세이버" width="40px"> &nbsp; 코닥 </p>
+            </div>
+        </div>
+          </div>
+        </article>
+        <aside class="right w3-contaier w3-margin-top">
+          <div id="login" class="w3-container">
+              <h4> <b> 로그인</b> </h4>
+              <input type="text" name="" id="id" placeholder="아이디" style="width: 180px;"><br>
+              <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 180px;"><br>
+              <button onclick="login();" class="w3-button w3-margin-top" style="width: 100%;">로그인</button>
+              <!--<input type="reset" value="취소" class="w3-button w3-red w3-margin-top" style="width: 35%;"><br>-->
+              <a href="#" id="find" class="w3-button w3-light-gray" style="width: 100%;">아이디/비밀번호 찾기</a>
+              <a href="register.jsp" target="_blank" id="register" class="w3-button w3-light-gray" style="width: 100%;">회원가입</a><br>
+          <div> <hr>
+          <div id="search" class="w3-center">
+              <p><b>인기검색어</b></p>
+              <table class="w3-table">
+                  <tr>
+                      <td>1</td>
+                      <td>코닥 펀세이버</td>
+                      <td>&#8210;</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>폴라로이드</td>
+                      <td>&#8593;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>코닥 필름</td>
+                      <td>&#8595;</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>일회용카메라</td>
+                      <td>&#8593;</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>후지필름</td>
+                      <td>&#8593;</td>
+                    </tr>
+                </table>
+          </div>   
+      </aside>
+        <div id="bookmark"> <!--position fixed로 aside밖에-->
+            <input type="image" src="../images/arrowtop.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,0)" alt="맨위로" />
+            <input type="image" src="../images/arrowbottom.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,3000)" alt="맨위로" />    
+        </div>
+    </section>
+    <footer class="w3-container w3-padding w3-margin-top">
+        <div class="w3-row">
+           <h5>&nbsp; <b> Filmming</b></h5>
+           <div class="w3-col s4 w3-container">
+              <p> TEL : 051-562-1117 <br>
+               평일 09:00 ~ 18:00 <br>
+              토 / 일 / 공휴일 휴무</p>
+              </div>
+           <div class="w3-col s4 w3-container">
+            <p> 법인명(상호) : 필르밍 | 대표 김예나 <br>
+             사업자등록번호 : 793-12-32470   <br>
+             주소 : 부산시 경영구 정보로 20-17</p>
+           </div>
+           <div class="w3-col s4 w3-container">
+            <a href="https://www.facebook.com/yena1117" target="_blank"><i class="fa fa-facebook" style="font-size:25px;color:white"></i></a>&nbsp;
+            <a href="https://www.instagram.com/makeusfeelalive__" target="_blank"><i class="fa fa-instagram" style="font-size:25px;color:white"></i></a>&nbsp;
+            <i class="fa fa-cc-visa" style="font-size:25px;color:white"></i>
+            <br> email : yena1117@donga.ac.kr
+            <br>Copyright &copy; Filliming. 
+            </div>
+         </div>
+     </footer>
+</body>
+</html>

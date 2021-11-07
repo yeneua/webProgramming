@@ -1,0 +1,12 @@
+section{
+    display: flex;
+}
+article{
+    flex: 4 ;
+}
+aside{
+    flex: 1;
+}
+#bookmark{position: fixed;
+    right: 30px;
+    bottom: 40px;}
