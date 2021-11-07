@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmming</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style01.css">
+    <style>
+        /*body{max-width: max-content; margin: 20px auto;}   STXingkai*/
+        *{background-color: rgb(255,255,255);
+        font-family: 나눔스퀘어, Arial, Helvetica, sans-serif;}
+        h1{
+            text-align: center;
+        }
+        ul{list-style-type: none;}
+        nav a{text-decoration: none;}
+        nav ul{
+            text-align: center;
+        }
+        
+        nav ul li{
+            font-size: large;
+            font-weight: bold;
+            display: inline;
+            margin: 30px;
+        }
+        ul{list-style:none; margin:0px; padding:0px;}
+    .one{float:left;}/* 전체 메뉴를 float 시킴 */
+    .one > li{float:left;}   /*1단 메뉴를 일렬로 늘어놓기 */
+    .one ul{display:none;}  /*2단 메뉴를 숨기고, 절대 위치 */
+    .one li:hover > ul {display:block;}  /*1단 메뉴에 마우스 오버했을 때 2단 메뉴 드러내가 */
+     
+    ul li a{text-decoration:none; display:block; width:90px;height: 30px;line-height: 30px;text-align:center;} 
+    ul li {width:90px;}  
+
+
+    #sub-menu > li >  a:hover {
+        text-decoration: underline;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Filmming</b></h1>
+    </header>
+    <nav>
+        <div id="navi" class="w3-bar w3-center">
+            <ul class="one"> 
+                <li><a href="#">menu1</a>
+                    <ul id="sub-menu">
+                        <li><a href="#">sub menu1</a></li>
+                        <li><a href="#">sub menu2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu2</a>
+                    <ul id="sub-menu">
+                        <li><a href="#">sub menu1</a></li>
+                        <li><a href="#">sub menu2</a></li>
+                        <li><a href="#">sub menu3</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#">menu3</a>
+                    <ul id="sub-menu">
+                        <li><a href="#">sub menu1</a></li>
+                        <li><a href="#">sub menu2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu4</a>
+                    <ul id="sub-menu">
+                        <li><a href="#">sub menu1</a></li>
+                        <li><a href="#">sub menu2</a></li>
+                        <li><a href="#">sub menu3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu5</a>
+                    <ul id="sub-menu">
+                        <li><a href="#">sub menu1</a></li>
+                        <li><a href="#">sub menu2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <article>article</article>
+        <aside class="right">aside</aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>
