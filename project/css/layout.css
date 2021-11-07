@@ -10,3 +10,7 @@ aside{
 #bookmark{position: fixed;
     right: 30px;
     bottom: 40px;}
+#search{
+top: 30px;
+left: 30px;
+position: sticky;}
