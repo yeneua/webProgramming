@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이달의 사진</title>
 </head>
+<link rel="stylesheet" href="./css/slide.css">
 <style>
     body{
         text-align: center;
@@ -15,10 +16,23 @@
     }
 </style>
 <body>    
-        <h3>11월 베스트 포토</h3> 
-        <img src="images/photo11.png" alt="" width="320px"> <br>
-        <남해에선 바멍> <br>
+    <h2>11월 베스트 포토</h2> 
+    <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <ul id="imgholder" class="imgs">
+            <li><img src="./images/photo11.png" width="320px"></li>
+            <li><img src="./images/photo15.png" width="320px"></li>
+            <li><img src="./images/photo16.png" width="320px"></li>
+        </ul>
+        <div class="bullets">
+            <label for="slide1">&nbsp;</label>
+            <label for="slide2">&nbsp;</label>
+            <label for="slide3">&nbsp;</label>
+        </div>
+    </div> <br>
         작가 : d.ongle <br> <br>
-        <button onclick="window.open('./sub05/sub05.html')">사진 등록하러 가기</button>
+        <button onclick="window.open('./sub05/sub05.html')">나도 사진 등록하러 가기</button>
         </body>   
 </html>
