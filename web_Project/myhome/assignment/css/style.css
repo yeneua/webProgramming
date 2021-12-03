@@ -1,0 +1,10 @@
+article,aside,nav{
+    display: flex;
+}
+article{
+    flex:3;
+
+}
+aside{
+    flex : 1;
+}

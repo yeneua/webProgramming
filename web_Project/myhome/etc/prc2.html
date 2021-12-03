@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    body{font-family:나눔고딕, NanumGothic, NanumBarunGothic,'Nanum Gothic',arial,verdana,sans-serif;}
+     
+     ul{list-style:none; margin:0px; padding:0px;}
+    .one{float:left;}/* 전체 메뉴를 float 시킴 */
+    .one > li{float:left;}   /*1단 메뉴를 일렬로 늘어놓기 */
+    .one ul{display:none;}  /*2단 메뉴를 숨기고, 절대 위치 */
+    .one li:hover > ul {display:block;}  /*1단 메뉴에 마우스 오버했을 때 2단 메뉴 드러내가 */
+     
+    ul li a{text-decoration:none; display:block; width:90px;height: 30px;line-height: 30px;text-align:center;} 
+    ul li {width:90px;}  
+
+
+    #sub-menu > li >  a:hover {
+        text-decoration: underline;}
+    
+    </style>
+    </head>
+    <body>    
+        <nav>
+            <div id="navi">
+                <ul class="one"> 
+                    <li><a href="#">menu1</a>
+                        <ul id="sub-menu">
+                            <li><a href="#">sub menu1</a></li>
+                            <li><a href="#">sub menu2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu2</a>
+                        <ul id="sub-menu">
+                            <li><a href="#">sub menu1</a></li>
+                            <li><a href="#">sub menu2</a></li>
+                            <li><a href="#">sub menu3</a></li>
+                        </ul>
+                    </li>
+                     <li><a href="#">menu3</a>
+                        <ul id="sub-menu">
+                            <li><a href="#">sub menu1</a></li>
+                            <li><a href="#">sub menu2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu4</a>
+                        <ul id="sub-menu">
+                            <li><a href="#">sub menu1</a></li>
+                            <li><a href="#">sub menu2</a></li>
+                            <li><a href="#">sub menu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu5</a>
+                        <ul id="sub-menu">
+                            <li><a href="#">sub menu1</a></li>
+                            <li><a href="#">sub menu2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </body>
+</html>
