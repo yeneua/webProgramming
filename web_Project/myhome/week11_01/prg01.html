@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function liStyle(){
+            const a = document.getElementsByTagName("li"); // a는 배열이다
+            for(let i=0; i<a.length; i++){
+                a[i].style.color="orange"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>겨울방학때 하고 싶은 일</h3>
+    <hr>
+    <ol id="ol1">
+        <li>제주도여행</li>
+        <li>사진배우기</li>
+        <li>영어공부</li>
+        <li>대외활동하기</li>
+    </ol>
+    <input id ="text" type="text" maxlength="40" ><br>
+<button onclick="liStyle()"> 스타일</button>  
+<button onclick="funAppend()"> 추가</button>
+
+</body>
+</html>

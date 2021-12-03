@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x;   //생성이 안되었는데 해당하는 내용을 먼저 선언함. 통용범위고려. DOM tree가 안 만들어진 상황 -> let으로 전역변수생성
+        function getLocation() {  //   BOM에 있는 navigator의 객체의 geolocation
+            x= document.getElementById("demo");
+            if (navigator.geolocation) { // 위치정보 객체
+            navigator.geolocation.getCurrentPosition(showPosition); //현재위치 정보리턴 (call back함수)  showPosition:매개변수인데, 함수의 매개변수임
+            //callback함수는 다른함수에 매개변수로 넘겨준 함수, 매개변수로 넘겨 받은 함수는 나중에 호출(callback)됨
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getLocation()">현재위치정보</button>
+    <div id="demo">
+
+    </div>
+</body>
+</html>

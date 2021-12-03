@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>DOM 객체 사용하기</title>
+    <script>//DOM객체 해당하는 내용 찾기
+        function start(){
+            //let header = document.getElementById("name");
+            let h=document.querySelectorAll("h1");  //여러개->배열
+            for(let i=0;i<h.length;i++){
+                h[i].style.background="indigo";
+                h[i].innerHTML="<i>경영대학</i>";
+            }
+            //h.style.background="yellow";
+            //h.innerHTML = "<i>경영대학</i>";// innerHTML:콘텐트
+        }
+    </script>
+</head>
+<body onload="start()"> <!--DOM객체가 다 만들어지면 event-->
+    <h1 id="name">동아대학교</h1>
+    <h1>경영정보학과</h1>
+    <h1><김예나/h1>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <title>Document</title>
+    <script>
+        const liStyle = function(){
+            const liList = document.getElementsByTagName("li");
+            console.log(liList)
+            for(let i=0; i<liList.length; i++){
+                liList[i].style.color = "blue";
+            }
+        }
+        function funAppend(){
+            const list = document.createElement("li");
+            const work = document.getElementById("text").value;
+            const node = document.createTextNode(work);
+            list.appendChild(node); //ol의 child로 붙이기
+            const ele=document.getElementById("ol1");
+            ele.appendChild(list);
+        }
+        function cartAppend(e){
+            const x = document.getElementById(e);
+            const ele=document.getElementById("cart"); //추가하고자 하는 id를 찾아서 자식(child)로 추가
+            ele.appendChild(x);
+        }
+        function cartRemove(e){ //장바구니에서삭제, 상품리스트에 다시 추가  --> ?복사
+            const x = document.getElementById(e); //매개변수가져옴
+            const cart=document.getElementById("cart");
+            const list=document.getElementById("list");
+            cart.removeChild(x);
+            list.appendChild(x);      
+        }
+    </script>
+    <style>
+        #cart, #list{
+            display: flex;
+        }
+        #img1, #img2, #img3{
+            flex: 3;
+        }
+    </style>
+</head>
+<body>
+    <h3>겨울방학때 하고 싶은 일</h3>
+    <hr>
+    <ol id="ol1">
+        <li>제주도여행</li>
+        <li>사진배우기</li>
+        <li>영어공부하기</li>
+        <li>대회활동하기</li>
+    </ol>
+    <input id ="text" type="text" maxlength="40" ><br>
+    <button onclick="liStyle();"> 스타일</button>  
+    <button onclick="funAppend();"> 추가</button>
+    <br>
+    <h2> 장바구니 </h2>
+    <div id="cart" style="width: 700px; height: 250px; border: 1px solid gray;">
+
+    </div>
+    <h2> 상품리스트 </h2>
+<div id="list" style="width: 700px; height: 250px; border: 1px solid gray;">
+    <div id="img1" >
+        <img src="product01.jpg" width="150" height="100">
+        <div>
+          <p>가격:1500000원/ 품명:노트북</p>
+          <button onclick="cartAppend('img1');">추가</button>
+          <button onclick="cartRemove('img1');">삭제</button>
+        </div>
+    </div>
+    <div id="img2">
+        <img src="product02.jpg" width="150" height="100">
+        <div>
+          <p>가격:500000원/ 품명:PC</p>
+          <button onclick="cartAppend('img2');">추가</button>
+          <button onclick="cartRemove('img2');">삭제</button>
+        </div>
+    </div>
+    <div id="img3">
+        <img src="product03.jpg" width="150" height="100">
+        <div >
+        <p>가격:10000원/ 품명:옷</p>
+          <button onclick="cartAppend('img3');">추가</button>
+          <button onclick="cartRemove('img3');">삭제</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

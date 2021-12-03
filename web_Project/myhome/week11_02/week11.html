@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2017447 김예나(event handler)</title>
+    <style>
+        #test{
+            width: 200px;
+            height: 150px;
+            border: 1px solid gray;
+        }
+    </style>
+    <script>
+        /* 이벤트 리스너 만들기
+           - HTML 태그 내 작성 : inline 이벤트 처리
+           - 이벤트 발생시 function 호출하는 방식
+           - addEventListener() 메소드 사용
+             element.addEventListener(event, function);*/
+            
+        function mover(e){
+            e.innerHTML="안녕하세요";
+            e.style.backgroundColor="pink";
+        }
+        function mout(e){
+            e.innerHTML="동아대학교 경영정보학과";
+            e.style.backgroundColor="white";
+        }
+        /*addEventListener() 메소드 사용*/
+        let name=''; // 전역변수
+        function init(){
+            name = document.getElementById("fname");
+            name.addEventListener("focus", bgcolor); //event가 focus면 bfcolor()라는 event 호출
+            name.addEventListener("change",myfunc);
+        }
+        function bgcolor(){
+            name.style.backgroundColor="gray";
+        }
+        function myfunc(){
+            name.value=name.value.toUpperCase();
+            name.style.backgroundColor="white";
+        }
+    </script>
+</head>
+<body onload="init();">
+    <!--인라인 이벤트 리스너-->
+    <p id="demo" onmouseover="this.style.backgroundColor='orange'; this.innerHTML='안녕하세요';" onmouseout="this.style.backgroundColor='white' ">
+        2017447 김예나
+    </p>
+    <!--이벤트 발생시 function 호출하는 방식-->
+    <div id="test" onmouseover="mover(this);" onmouseout="mout(this);"> <!--parameter : this(현재객체)-->
+        동아대학교 경영정보학과
+    </div>
+    <!--DOM에 event추가해 호출하는 방식 addEventListenr()사용-->
+    영문 이름을 입력 : <input type="text" name="" id="fname">
+</body>
+</html>
