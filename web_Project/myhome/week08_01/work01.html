@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> /* 내부스크립트. 내가 정의해준 순서대로 번역하고 수행됨
+     function이란 : 하나의 특별한 작업을 수행하도록 설계된 독립적인 블럭,  -> '하나의' 작업
+     - 함수 선언 형식
+     function name(parameter1, parameter2, parameter3...) {
+         //code to be executed
+         //return undefined; <- return이 생략되면 정의되지 않은것이 return됨
+     }
+     - 함수호출
+       변수이름 = 함수이름(arg1, arg2, arg3...)  //argrument:parameter에 들어가야될 값
+       함수이름(arg1, arg2, arg3...)
+       */
+       //function 선언
+       function add(p1,p2){
+           return p1+p2;
+       }
+       let result = add(100,70);
+       alert("결과"+add(90,50)); //alert로 함수호출
+       alert(result);
+
+       /*Function Expression : expression을 사용하여 정의함. 변수에 저장할 수 있음
+        const x = function (a,b) {return a*b};  -> parameter, output은 있음
+        let z = x(4,3);  -> 호출할 때 변수의 이름.
+        */
+       const mul = function(x, y) {return x*y} //곱해서 mul에 저장
+       alert(mul(30,4));
+       
+    </script> 
+</head>
+<body>
+    
+</body>
+</html>
