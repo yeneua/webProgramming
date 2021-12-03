@@ -1,0 +1,19 @@
+div{
+    width: 50px;
+    height: 50px;
+    margin: 20px; /*여백*/
+    background-color: red;
+    display: block; /*옆으로*/
+}
+.box{
+    background-color: pink;
+    top:30px;
+    left: 50px;
+    position:absolute;
+}
+.container{
+    background-color: yellow;
+    left: 50px; /*좌측 기준으로 어디쯤에 위치시킬건지 결정 + position 속성이랑 함께사용*/
+    top:100px; /*position:static일땐, left속성이 무시됨*/
+    position:relative;
+}
