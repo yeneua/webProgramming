@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmming</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/hover.css"> <!--index페이지 bestitem부분-->
+    <link rel="stylesheet" href="./css/nA_img.css">
+    <link rel="stylesheet" href="./css/nA_imghover.css">
+    <style>
+        *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
+        body{max-width: 980px; margin: 0 auto;}
+        header{
+            margin-top:50px;
+            margin-bottom: 40px;
+        }
+        h1{text-align: center;}
+        nav{
+            position: relative;
+            z-index: 2; /*보이기 순서*/
+        }
+        footer{background-color: #333;
+        color: white;}
+        #login button{
+            background-color: #333;
+            color: white;
+        }
+        #login a{
+            text-decoration: none;
+            margin: 5px 0px 0px 0px;
+        }
+        .myMenu{float: right;
+        margin: 5px 10px 0px 0px;}
+        .myMenu a{text-decoration: none;}
+    </style>
+    <script>
+        function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       alert(id + "님이 로그인하였습니다 ");
+                   } else {
+                       alert("비밀번호를 확인하세요");
+                   }
+               }else{
+                   alert("회원가입이 필요합니다");
+               }
+           }
+    </script>
+    <style>
+        #div1, #div2{
+            width: 348px; height: 300px; border: 1px solid gray;
+            padding: 5px; margin: 20px;
+            display: inline-block;
+            /* display: flex; */
+        }
+        #div3{width: 740px; height: 1000px;
+            padding: 5px; margin: 20px;
+        }
+        .fl {float: left;
+        overflow: hidden;}
+    </style>
+
+    <script type="text/javascript">
+        function drag(target, food) {		//드래그 시작시 호출 할 함수
+            food.dataTransfer.setData('Text', target.id);
+        };
+        function drop(target, food) {		//드롭시 호출 할 함수
+            var id = food.dataTransfer.getData('Text');
+            target.appendChild(document.getElementById(id));
+            food.preventDefault();	
+        };
+    </script>
+</head>
+<body>
+    <div class="myMenu">
+        <a href="index.html" style="font-size: 10px;">장바구니 |</a>
+        <a href="index.html" style="font-size: 10px;">주문조회 |</a>
+        <a href="index.html" style="font-size: 10px;">마이페이지</a></div><br><hr>
+    <header>
+        <div id="title" class="w3-center w3-margin-top w3-margin-bottom w3-margin-xxlarge">
+        <a href="index.html"><img src="./images/title1.png" alt="Filmming" width=300px></a></div>
+    </header>
+    <nav>
+        <ul>
+          <li class="dropdown w3-center">
+            <a href="./sub01/sub01.html" class="dropbtn">롤필름</a>
+            <div class="dropdown-content">
+              <a href="./sub01/sub01_01.html">컬러필름</a>
+              <a href="./sub01/sub01_02.html">흑백필름</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub02/sub02.html" class="dropbtn">카메라</a>
+            <div class="dropdown-content">
+              <a href="./sub02/sub02_01.html">일회용카메라</a>
+              <a href="./sub02/sub02_02.html">다회용카메라</a>
+              <a href="./sub02/sub02_03.html">폴라로이드</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub03/sub03.html" class="dropbtn">현상/인화/스캔</a>
+            <div class="dropdown-content">
+              <a href="./sub03/sub03.html">현상/스캔</a>
+              <a href="./sub03/sub03.html">인화</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub04/sub04.html" class="dropbtn">리뷰</a>
+          </li>
+          <li class="dropdown">
+            <a href="./sub05/sub05.html" class="dropbtn">필름사진</a>
+          </li>
+        </ul>
+    </nav>
+    <section>
+        <article> <br>
+            <div id="div1" class="fl" ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;" style="overflow:auto;">
+                <div class="w3-center"><h3><b>장바구니</b></h3></div></div>
+                <div id="div2" class="fl" ondrop="drop(this,event);" ondragenter="return false;" ondragover="return false;" style="overflow:auto;">
+                <div class="w3-center"><h3><b> 찜 목록</b></h3></div></div>
+                <div id="div3" ondrop="drop(this, event);" ondragenter="return false;" ondragover=" return false;">
+                    <div class="w3-center"><h3><b>상품리스트</b></h3> <p style="color: gray; font-size: 13px;">*상품을 끌어다 놓으세요</p></div><br>
+                    <div class="w3-center">
+                        <img src="./images/c_film3.jpg" alt="컬러필름" draggable="true" id="c_film3" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/c_film6.jpg" alt="컬러필름" draggable="true" id="c_film6" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/d_cam1.png" alt="일회용카메라" draggable="true" id="d_cam1" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/d_cam2.png" alt="일회용카메라" draggable="true" id="d_cam2" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/c_film5.jpg" alt="컬러필름" draggable="true" id="c_film5" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/d_cam3.jpg" alt="일회용카메라" draggable="true" id="d_cam3" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/p_cam4.jpg" alt="폴라로이드카메라" draggable="true" id="p_cam4" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/d_cam5.jpg" alt="일회용카메라" draggable="true" id="d_cam5" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/c_film4.jpg" alt="컬러필름" draggable="true" id="c_film4" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/p_cam2.jpg" alt="폴라로이드카메라" draggable="true" id="p_cam2" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/p_cam3.jpg" alt="폴라로이드카메라" draggable="true" id="p_cam3" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam1.jpg" alt="다회용카메라" draggable="true" id="m_cam1" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam2.jpg" alt="다회용카메라" draggable="true" id="m_cam2" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam3.png" alt="다회용카메라" draggable="true" id="m_cam3" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam4.jpg" alt="다회용카메라" draggable="true" id="m_cam4" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_film1.jpg" alt="흑백필름" draggable="true" id="m_film1" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_film2.jpg" alt="흑백필름" draggable="true" id="m_film2" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_film3.jpg" alt="흑백필름" draggable="true" id="m_film3" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/d_cam8.png" alt="일회용카메라" draggable="true" id="d_cam8" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam7.jpg" alt="다회용카메라" draggable="true" id="m_cam7" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam9.png" alt="다회용카메라" draggable="true" id="m_cam9" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam6.jpg" alt="다회용카메라" draggable="true" id="m_cam6" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/m_cam5.jpg" alt="다회용카메라" draggable="true" id="m_cam5" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                        <img src="./images/p_cam5.png" alt="폴라로이드카메라" draggable="true" id="p_cam5" ondragstart="drag(this, event);" style="width: 105px; height: 105px; padding: 5px;">
+                    </div>
+                </div>
+
+        </article>
+        <aside class="right w3-contaier w3-margin-top">
+            <div id="login" class="w3-container">
+                <h4> <b> 로그인</b> </h4>
+                <input type="text" name="" id="id" placeholder="아이디" style="width: 180px;"><br>
+                <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 180px;"><br>
+                <button onclick="login();" class="w3-button w3-margin-top" style="width: 100%; height: 38.5px;">로그인</button>
+                <!--<input type="reset" value="취소" class="w3-button w3-red w3-margin-top" style="width: 35%;"><br>-->
+                <a href="#" id="find" class="w3-button w3-light-gray" style="width: 100%;">아이디/비밀번호 찾기</a>
+                <a href="regi.html" target="_self" id="register" class="w3-button w3-light-gray" style="width: 100%;">회원가입</a><br>
+            </div> <hr class="w3-margin-left">
+            <div id="search" class="w3-center w3-contaier w3-border w3-margin-left w3-margin-bottom">
+                <p><b>인기검색어</b></p>
+                <table class="w3-table">
+                    <tr>
+                        <td>1</td>
+                        <td>코닥 펀세이버</td>
+                        <td>&#8210;</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>폴라로이드</td>
+                        <td>&#8593;</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>코닥 필름</td>
+                        <td>&#8595;</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>일회용카메라</td>
+                        <td>&#8593;</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>후지필름</td>
+                        <td>&#8593;</td>
+                      </tr>
+                  </table><br>
+            </div>
+        </aside>
+        <div id="bookmark"> <!--position fixed로 aside밖에-->
+            <input type="image" src="./images/arrowtop.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,0)" alt="맨위로" />
+            <input type="image" src="./images/arrowbottom.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,3000)" alt="맨아래로" />    
+        </div>
+    </section>
+    <footer class="w3-container w3-padding w3-margin-top">
+        <div class="w3-row">
+           <h5>&nbsp; <b> Filmming</b></h5>
+           <div class="w3-col s4 w3-container">
+              <p> TEL : 051-562-1117 <br>
+               평일 09:00 ~ 18:00 <br>
+              토 / 일 / 공휴일 휴무</p>
+              </div>
+           <div class="w3-col s4 w3-container">
+            <p> 법인명(상호) : 필르밍 | 대표 김예나 <br>
+             사업자등록번호 : 793-12-32470   <br>
+             주소 : 부산시 경영구 정보로 20-17</p>
+           </div>
+           <div class="w3-col s4 w3-container">
+            <a href="https://www.facebook.com/yena1117" target="_blank"><i class="fa fa-facebook" style="font-size:25px;color:white"></i></a>&nbsp;
+            <a href="https://www.instagram.com/makeusfeelalive__" target="_blank"><i class="fa fa-instagram" style="font-size:25px;color:white"></i></a>&nbsp;
+            <i class="fa fa-cc-visa" style="font-size:25px;color:white"></i>
+            <br> email : yena1117@donga.ac.kr
+            <br>Copyright &copy; Filliming. 
+            </div>
+         </div>
+     </footer>
+</body>
+</html>
