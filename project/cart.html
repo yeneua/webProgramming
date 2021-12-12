@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/hover.css"> <!--index페이지 bestitem부분-->
-    <link rel="stylesheet" href="./css/nA_img.css">
-    <link rel="stylesheet" href="./css/nA_imghover.css">
     <style>
         *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
         body{max-width: 980px; margin: 0 auto;}
@@ -37,6 +34,18 @@
         .myMenu{float: right;
         margin: 5px 10px 0px 0px;}
         .myMenu a{text-decoration: none;}
+
+        /*장바구니 스타일*/
+        #div1, #div2{
+            width: 348px; height: 300px; border: 1px solid gray;
+            padding: 5px; margin: 10px;
+            display: inline-block;
+        }
+        #div3{width: 740px; height: 1000px;
+            padding: 5px; margin: 10px;
+        }
+        .fl {float: left;
+        overflow: hidden;}
     </style>
     <script>
         function login(){
@@ -53,21 +62,7 @@
                }
            }
     </script>
-    <style>
-        #div1, #div2{
-            width: 348px; height: 300px; border: 1px solid gray;
-            padding: 5px; margin: 10px;
-            display: inline-block;
-            /* display: flex; */
-        }
-        #div3{width: 740px; height: 1000px;
-            padding: 5px; margin: 10px;
-        }
-        .fl {float: left;
-        overflow: hidden;}
-    </style>
-
-    <script type="text/javascript">
+    <script type="text/javascript"> // 드래그앤드롭
         function drag(target, food) {		//드래그 시작시 호출 할 함수
             food.dataTransfer.setData('Text', target.id);
         };
