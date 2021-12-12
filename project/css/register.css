@@ -1,0 +1,28 @@
+label {
+    text-align: left;
+    display: inline-block;
+    width: 100px;
+}
+h3 {
+    letter-spacing: 2px;
+
+}
+
+input {
+    display: inline-block;
+    width: 180px;
+}
+
+fieldset {
+    text-align: center;
+    margin: auto;
+    width: 965px;
+    border: gray solid 1px;
+  
+}
+
+legend {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}

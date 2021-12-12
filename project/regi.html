@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmming</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/register.css">
+<style>
+        *{font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;}
+        body{max-width: 980px; margin: 0 auto;}
+        header{
+            margin-top:50px;
+            margin-bottom: 40px;
+        }
+        nav{
+            position: relative;
+            z-index: 2; /*보이기 순서*/
+        }
+        footer{background-color: #333;
+        color: white;}
+        .myMenu{float: right;
+        margin: 5px 10px 0px 0px;}
+        .myMenu a{text-decoration: none;}
+        #product button{margin: 0px 0px 5px 0px;}
+    </style>
+    <script src="main.js"></script>
+   
+</head>
+<body>
+    <div class="myMenu">
+        <a href="index.html" style="font-size: 10px;">장바구니 |</a>
+        <a href="index.html" style="font-size: 10px;">주문조회 |</a>
+        <a href="index.html" style="font-size: 10px;">마이페이지</a></div><br><hr>
+    <header>
+        <div class="w3-center w3-margin-top w3-margin-bottom w3-margin-xxlarge">
+        <a href="index.html"><img src="./images/title1.png" alt="Filmming" width=300px></a></div>
+    </header>
+    <nav>
+        <ul>
+          <li class="dropdown w3-center">
+            <a href="./sub01/sub01.html" class="dropbtn">롤필름</a>
+            <div class="dropdown-content">
+              <a href="./sub01/sub01_01.html">컬러필름</a>
+              <a href="./sub01/sub01_02.html">흑백필름</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub02/sub02.html" class="dropbtn">카메라</a>
+            <div class="dropdown-content">
+              <a href="./sub02/sub02_01.html">일회용카메라</a>
+              <a href="./sub02/sub02_02.html">다회용카메라</a>
+              <a href="./sub02/sub02_03.html">폴라로이드</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub03/sub03.html" class="dropbtn">현상/인화/스캔</a>
+            <div class="dropdown-content">
+              <a href="./sub03/sub03.html">현상/스캔</a>
+              <a href="./sub03/sub03.html">인화</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="./sub04/sub04.html" class="dropbtn">리뷰</a>
+          </li>
+          <li class="dropdown">
+            <a href="./sub05/sub05.html" class="dropbtn">필름사진</a>
+          </li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+<br>
+            <div>
+                <div id="page-wrap" class=" w3-center">
+                    <form method="post" action="#" name="form" onsubmit="return checkAll();">
+                        <fieldset class="w3-center">
+                            <legend><h3><b>회원정보입력</b></h3></legend>
+                                <label for="userId">아이디</label>
+                                <input type="text" name="userId" id="text1" class="w3-border" style="width:150px; height: 40px;" />
+                                <button class="w3-button w3-round w3-white w3-border">중복검사</button>
+                                <p style="font-size: 13px;">*아이디는 영문대소문자와 숫자 4~12자리로 입력해주세요</p>
+                                <label for="password1">패스워드</label>
+                                <input type="password" name="password1" class="w3-border" style="width: 250px; height: 40px;"/>
+                                <p style="font-size: 13px;">*비밀번호는 영문대소문자와 숫자 4~12자리로 입력해주세요 </p>
+                                <label for="password2">패스워드 확인</label>
+                                <input type="password" name="password2" class="w3-border" style="width: 250px; height: 40px;"/><br /><br>
+                                <label for="name">이름</label>
+                                <input type="text" name="name" class="w3-border" style="width: 250px; height: 40px;" /><br /><br>
+                                <label for="tel">휴대폰 번호</label>
+                                <input type="tel" name="tel" class=" w3-border" style="width: 250px; height: 40px;" /><br><br />
+                                <label for="tel">성별</label>
+                                <form action="#">
+                                    <select name="gender" id="gender" class="w3-border" style="width: 250px; height: 40px;">
+                                        <option value="select">선택</option>
+                                        <option value="male">남성</option>
+                                        <option value="female">여성</option>
+                                        <option value="no">선택 안함</option>
+                                    </select>
+                                </form><br><br>
+                                <label for="email">이메일</label>
+                                <input type="email" name="email" class="w3-border" style="width: 250px; height: 40px;" /><br>
+                                <br />
+                                <label for="dob">생일</label>
+                                <input type="date" name="dob" class="w3-border" style="width: 250px; height: 40px;" />
+                                <br><br><br>
+                                <input type="submit" name="submit" value="가입하기" class="w3-button w3-gray"/>
+                                <input type="reset" name="reset" value="다시입력" class="w3-button w3-gray"/>
+                        </fieldset>
+                    </form>
+                </div>
+
+        </article>
+        <div id="bookmark"> <!--position fixed로 aside밖에-->
+            <input type="image" src="./images/arrowtop.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,0)" alt="맨위로" />
+            <input type="image" src="./images/arrowbottom.png" style="width: 30px;" onClick="javascript:window.scrollTo(0,3000)" alt="맨아래로" />    
+        </div>
+    </section>
+    <footer class="w3-container w3-padding w3-margin-top">
+        <div class="w3-row">
+           <h5>&nbsp; <b> Filmming</b></h5>
+           <div class="w3-col s4 w3-container">
+              <p> TEL : 051-562-1117 <br>
+               평일 09:00 ~ 18:00 <br>
+              토 / 일 / 공휴일 휴무</p>
+              </div>
+           <div class="w3-col s4 w3-container">
+            <p> 법인명(상호) : 필르밍 | 대표 김예나 <br>
+             사업자등록번호 : 793-12-32470   <br>
+             주소 : 부산시 경영구 정보로 20-17</p>
+           </div>
+           <div class="w3-col s4 w3-container">
+            <a href="https://www.facebook.com/yena1117" target="_blank"><i class="fa fa-facebook" style="font-size:25px;color:white"></i></a>&nbsp;
+            <a href="https://www.instagram.com/makeusfeelalive__" target="_blank"><i class="fa fa-instagram" style="font-size:25px;color:white"></i></a>&nbsp;
+            <i class="fa fa-cc-visa" style="font-size:25px;color:white"></i>
+            <br> email : yena1117@donga.ac.kr
+            <br>Copyright &copy; Filliming. 
+            </div>
+         </div>
+     </footer>
+</body>
+</html>
