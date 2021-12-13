@@ -50,6 +50,8 @@
         margin: 5px 10px 0px 0px;}
         .myMenu a{text-decoration: none;}
         #product button{margin: 0px 0px 5px 0px;}
+        #login div{width: 212px;}
+        #search{width: 211px;}
     </style>
     <script>
         function login(){
@@ -58,6 +60,7 @@
                if(id==="admin"){
                    if(pw=="1234"){
                        alert(id + "님이 로그인하였습니다 ");
+                        document.getElementById('login').innerHTML=`<div class="w3-container w3-padding"><img src=./images/profile.png width="50px;">&nbsp;&nbsp;&nbsp;admin님<br><button onclick = "location.href = 'index.html'" class="w3-button w3-margin-top w3-light-gray w3-round" style="width: 180px; height: 38.5px;">로그아웃</button><button onclick = "location.href = './mycart.html'" class="w3-button w3-margin-top w3-round" style="width: 180px; height: 38.5px;">장바구니</button></div>`
                    } else {
                        alert("비밀번호를 확인하세요");
                    }
@@ -279,7 +282,7 @@
             </div>
         </article>
         <aside class="right w3-contaier w3-margin-top">
-            <div id="login" class="w3-container">
+            <div id="login" class="w3-container w3-margin-right">
                 <h4> <b> 로그인</b> </h4>
                 <input type="text" name="" id="id" placeholder="아이디" style="width: 180px;"><br>
                 <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 180px;"><br>

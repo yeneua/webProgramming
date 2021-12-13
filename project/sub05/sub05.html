@@ -40,6 +40,8 @@
         .myMenu a{text-decoration: none;}
         #product button{margin: 0px 0px 5px 0px;}
         #demo table td{line-height: 150px;}
+        #login div{width: 180px;}
+        #search{width: 211px;}
     </style>
     <script>
         function login(){
@@ -48,6 +50,7 @@
                if(id==="admin"){
                    if(pw=="1234"){
                        alert(id + "님이 로그인하였습니다 ");
+                       document.getElementById('login').innerHTML=`<div class="w3-container w3-margin-right"><img src=../images/profile.png width="50px;">&nbsp;&nbsp;&nbsp;admin님<br><button onclick = "location.href = 'sub05.html'" class="w3-button w3-margin-top w3-light-gray w3-round" style="width: 180px; height: 38.5px;">로그아웃</button><button onclick = "location.href = '../mycart.html'" class="w3-button w3-margin-top w3-round" style="width: 180px; height: 38.5px;">장바구니</button></div>`
                    } else {
                        alert("비밀번호를 확인하세요");
                    }
