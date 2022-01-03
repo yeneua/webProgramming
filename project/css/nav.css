@@ -11,7 +11,7 @@ li {
     float: center;
 }
 li a, .dropbtn {
-    display: block;  /*inline? inline-block??*/
+    display: inline-block;  /*inline? inline-block??*/
     color: white;
     text-align: center;
     padding: 14px 0px; /*간격*/
