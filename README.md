@@ -12,6 +12,6 @@
   
 https://yeneua.github.io/webProgramming/ + 폴더명
 
-intro : 자기소개 페이지 <br>
-project : 쇼핑몰 페이지 <br>
-geo.html : 위치기반 api <br>
+📁 intro : 자기소개 페이지 <br>
+📁 project : 쇼핑몰 페이지 <br>
+📁 geo.html : 위치기반 api <br>
